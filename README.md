@@ -54,5 +54,5 @@ npm test
 
 ## Running the app
 
-After installation the app can be served locally on _http://localhost:4200/_
-The route to enter the todos is on _http://localhost:4200/todo_
+- After installation the app can be served locally on _http://localhost:4200/_
+- The route to enter the todos is on _http://localhost:4200/todo_
