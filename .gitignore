@@ -1,0 +1,62 @@
+# Node and NPM files
+node_modules/
+npm-debug.log
+
+# Build output
+/dist/
+/tmp/
+/out-tsc/
+
+# Environment files
+/src/environments/*.js
+/src/environments/*.js.map
+/src/environments/*.ts
+
+# Compiled output
+/*.js
+/*.js.map
+
+# End-to-end testing
+/e2e/*.js
+/e2e/*.js.map
+
+# Angular CLI configuration
+.angular-cli.json
+.angular-cli.json.save
+.angular-cli-ghpages
+
+# Editor-specific files
+.vscode/
+*.code-workspace
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# IDE configuration files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# MacOS specific files
+.DS_Store
+
+# Compiled Webpack bundles and cache
+/dist/
+/coverage/
+
+# Temporary files
+*.log
+*.tmp
+
+# Jest test result files
+/jest-test-results.xml
+
+# Angular service worker generated files
+ngsw-config.json
+ngsw.json
+
+# Angular custom workspace setup file
+/nx.json
+/workspace.json
