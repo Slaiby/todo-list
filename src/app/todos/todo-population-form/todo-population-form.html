@@ -1,0 +1,16 @@
+<div class="populationFormContainer">
+  <h2 mat-dialog-title>Todo Form</h2>
+  <mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder="Todo Name" [(ngModel)]="newTodo.name">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Description" [(ngModel)]="newTodo.description"></textarea>
+    </mat-form-field>
+    <mat-checkbox [(ngModel)]="newTodo.isComplete">Is Complete</mat-checkbox>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button color="primary" (click)="onSaveTodo()">Save</button>
+  </mat-dialog-actions>
+</div>
