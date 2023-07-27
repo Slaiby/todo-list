@@ -1,62 +1,49 @@
-# Node and NPM files
-node_modules/
-npm-debug.log
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Build output
-/dist/
-/tmp/
-/out-tsc/
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
-# Environment files
-/src/environments/*.js
-/src/environments/*.js.map
-/src/environments/*.ts
-
-# Compiled output
-/*.js
-/*.js.map
-
-# End-to-end testing
-/e2e/*.js
-/e2e/*.js.map
-
-# Angular CLI configuration
-.angular-cli.json
-.angular-cli.json.save
-.angular-cli-ghpages
-
-# Editor-specific files
-.vscode/
-*.code-workspace
-
-# Dependency lock files
+# dependencies
+/node_modules
 package-lock.json
-yarn.lock
 
-# IDE configuration files
-.idea/
-*.iml
-*.iws
-*.ipr
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
-# MacOS specific files
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
 .DS_Store
-
-# Compiled Webpack bundles and cache
-/dist/
-/coverage/
-
-# Temporary files
-*.log
-*.tmp
-
-# Jest test result files
-/jest-test-results.xml
-
-# Angular service worker generated files
-ngsw-config.json
-ngsw.json
-
-# Angular custom workspace setup file
-/nx.json
-/workspace.json
+Thumbs.db
+.vscode/launch.json
