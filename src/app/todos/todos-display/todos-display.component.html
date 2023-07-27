@@ -1,0 +1,31 @@
+<div class="displayContainer">
+  <div class="buttonInputContainer">
+    <mat-form-field class="input">
+      <input matInput placeholder="Filter by name" [(ngModel)]="filterByName">
+    </mat-form-field>
+    <button class="addTodoButton" mat-raised-button (click)="handleAddButtonClick()">New Tasks</button>
+  </div>
+  <div class="noTasksDisplay" *ngIf="(todoListData | searchByName: filterByName).length == 0">
+    <span class="displayText">No Todos to display</span>
+  </div>
+  <div class="todosSection">
+    <mat-list class="pendingTodos">
+      <mat-list-item *ngFor="let todo of todoListData | filterTodo: false | searchByName: filterByName" (click)="handleTodoClick(todo)">
+        <div class="todoContent">
+          <span class="todoTitle">{{todo.name}}</span>
+          <span class="todoDescription">{{todo.description}}</span>
+        </div>
+        <mat-icon matListItemIcon (click)="editModal($event,todo)">edit</mat-icon>
+      </mat-list-item>
+    </mat-list>
+    <mat-list class="completedTodos">
+      <mat-list-item *ngFor="let todo of todoListData | filterTodo: true | searchByName: filterByName" (click)="handleTodoClick(todo)">
+        <div class="todoContent">
+          <span class="applyCompleted todoTitle">{{todo.name}}</span>
+          <span class="todoDescription">{{todo.description}}</span>
+        </div>
+        <mat-icon matListItemIcon (click)="confirmationDelete($event,todo)">delete</mat-icon>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

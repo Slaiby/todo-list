@@ -1,0 +1,70 @@
+
+@import ../../../assets/global-styles/abstracts/_colors
+.displayContainer
+    width: 100%
+    .buttonInputContainer
+        width: 100%
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        ::ng-deep
+            .mat-mdc-form-field-subscript-wrapper
+                display: none
+        .input
+            flex: 1
+        .addTodoButton
+            margin: 0 10px
+    .noTasksDisplay
+        margin-top: 10px
+        .displayText
+            font-weight: bold
+            font-size: 16px
+    .todosSection
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 76px
+        padding-top: 20px
+        @media screen and (max-width: 768px)
+            grid-template-columns: 1fr
+            grid-gap: 40px
+        @media screen and (max-width: 480px)
+            grid-template-columns: 1fr
+            grid-gap: 20px
+            padding-top: 10px
+        .todoContent
+            display: flex
+            flex-direction: column
+            padding: 10px
+            .todoTitle
+                font-weight: bold
+                font-size: 16px
+            .todoDescription
+                font-size: 10px
+                color: $grey
+        ::ng-deep
+            .mat-mdc-list
+                width: 50%
+                padding: 0
+            .mat-mdc-list-item
+                padding: 0
+                cursor: pointer
+                display: flex
+                flex-direction: row-reverse
+                background-color: $light-grey
+                &:not(:last-of-type)
+                    border-bottom: 0.75px solid $transparent-light-grey
+                .mat-icon
+                    margin: 0 10px
+                    font-size: 20px
+        .pendingTodos
+            width: 100%
+            @extend .applyElevatedCardShadow
+        .completedTodos
+            width: 100%
+            @extend .applyElevatedCardShadow
+            .applyCompleted
+                text-decoration: line-through
+        .applyElevatedCardShadow
+            box-shadow: 0 2px 2px 0 $shadow-black,0 3px 1px -2px $shadow-black-lighter,0 1px 5px 0 $shadow-black-lightest
+            border-radius: 5px
