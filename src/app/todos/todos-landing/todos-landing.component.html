@@ -1,0 +1,4 @@
+<div class="container">
+  <app-loader *ngIf="isLoading"></app-loader>
+  <app-todos-display (todosListChange)="handleTodoChanges($event)" [todosList]=" todosList"></app-todos-display>
+</div>
